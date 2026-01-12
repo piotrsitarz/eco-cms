@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "distributors",
+  "info": {
+    "singularName": "distributor",
+    "pluralName": "distributors",
+    "displayName": "Distributor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "address": {
+      "type": "string"
+    },
+    "position_lat": {
+      "type": "decimal",
+      "required": true
+    },
+    "position_lng": {
+      "type": "decimal",
+      "required": true
+    },
+    "tercs": {
+      "type": "json",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "unique": true
+    },
+    "phone": {
+      "type": "string",
+      "unique": true
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "distributors"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "distributors"
+    }
+  }
+}

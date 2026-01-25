@@ -53,6 +53,14 @@
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "inversedBy": "distributors"
+    },
+    "rodo_info_sent": {
+      "type": "boolean",
+      "default": false
+    },
+    "rodo_consent_accepted": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

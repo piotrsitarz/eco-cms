@@ -537,6 +537,10 @@ export interface ApiDistributorDistributor extends Struct.CollectionTypeSchema {
     position_lat: Schema.Attribute.Decimal & Schema.Attribute.Required;
     position_lng: Schema.Attribute.Decimal & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    rodo_consent_accepted: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    rodo_info_sent: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
     tercs: Schema.Attribute.JSON & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;

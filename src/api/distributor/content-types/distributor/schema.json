@@ -32,6 +32,10 @@
     },
     "tercs": {
       "type": "json",
+      "required": false
+    },
+    "terc_commune": {
+      "type": "string",
       "required": true
     },
     "email": {

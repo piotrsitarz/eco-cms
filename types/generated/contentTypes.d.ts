@@ -542,7 +542,8 @@ export interface ApiDistributorDistributor extends Struct.CollectionTypeSchema {
     rodo_info_sent: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
-    tercs: Schema.Attribute.JSON & Schema.Attribute.Required;
+    terc_commune: Schema.Attribute.String & Schema.Attribute.Required;
+    tercs: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

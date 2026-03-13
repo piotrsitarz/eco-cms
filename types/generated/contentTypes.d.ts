@@ -524,6 +524,8 @@ export interface ApiDistributorDistributor extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
     email: Schema.Attribute.Email & Schema.Attribute.Unique;
+    lat: Schema.Attribute.String;
+    lng: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

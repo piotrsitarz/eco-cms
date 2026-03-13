@@ -30,6 +30,12 @@
       "type": "decimal",
       "required": true
     },
+    "lat": {
+      "type": "string"
+    },
+    "lng": {
+      "type": "string"
+    },
     "tercs": {
       "type": "json",
       "required": false
